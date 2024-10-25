@@ -31,7 +31,7 @@ jobs:
       - name: Convert Markdown to PDF and docx
         run: |
           pandoc README.md -o output/${{ env.pdf_filename }} --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
-          pandoc README.md -o output/${{ env.docx_filename }}
+          pandoc README.md -o output/${{ env.docx_filename }} # --reference-doc=templates/reference.docx
 
       - name: Commit generated files
         run: |
@@ -42,4 +42,4 @@ jobs:
           git add output/${{ env.docx_filename }}
           
           git commit -m "Add generated files from README" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/m-miller/resume-template.git
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@${{ github.repository }}.git
