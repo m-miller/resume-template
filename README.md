@@ -1,29 +1,11 @@
-# FirstName LastName
-City, State | Phone | [you@email.com](mailto:you@email.com) | [linkedin.com/in/you](http://linkedin.com/in/you) | [github.com/handle](http://github.com/handle)
+# Resumé versioning automation
+Convert your resumé automatically into PDF and docx formats on save. Keep a record of the changes you've made to your resumé for each employer you submit it to.
 
-## Short Title Heading 
-Short two-sentence or so description or bio or desired work role
+## How to use
+- Update [name.txt](../blob/main/name.txt) with your name with an underscore between first, last: `First_Last`. This will be the name of the PDF and docx files, followed by `_resume`.
 
-### **Skills:**
-**List of skills**
+- Update [resume.md](../blob/main/resume.md) with your desired content.
 
-### **Professional Experiences:**  
-#### Date From - To | Title | Business, Location
+- Commit the changes either to a new branch or main, the corresponding PDF and docx files will be updated in the output directory.
 
-- Bulleted list of accomplishments/responsibilities
-
-- List item
-
-
-#### Date From - To | Title | Business, Location
-
-- Bulleted list of accomplishments/responsibilities
-
-- List item
-
-
-#### **Education**
-
-- Bulleted list of Institution, Degree, Dates
-
-#### **Other items**
+- Download the files as needed 
