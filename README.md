@@ -1,4 +1,4 @@
-# Name 
+# FirstName LastName
 City, State | Phone | [you@email.com](mailto:you@email.com) | [linkedin.com/in/you](http://linkedin.com/in/you) | [github.com/handle](http://github.com/handle)
 
 ## Short Title Heading 
