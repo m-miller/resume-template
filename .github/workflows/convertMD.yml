@@ -28,7 +28,7 @@ jobs:
           pandoc README.md -o output/template_resume.pdf --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
           pandoc README.md -o output/template_resume.docx
 
-      - name: Commit JSON and PDF to repository
+      - name: Commit docx and PDF to repository
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
