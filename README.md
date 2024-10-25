@@ -25,3 +25,5 @@ Short two-sentence description or bio
 #### **Education**
 
 - Bulleted list of Institution, Degree, Dates
+
+#### **Other items**
