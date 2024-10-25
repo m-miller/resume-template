@@ -12,7 +12,7 @@ Short two-sentence or so description or bio or desired work role
 
 - Bulleted list of accomplishments/responsibilities
 
-- List item test
+- List item
 
 
 #### Date From - To | Title | Business, Location
