@@ -2,7 +2,7 @@
 City, State | Phone | [you@email.com](mailto:you@email.com) | [linkedin.com/in/you](http://linkedin.com/in/you) | [github.com/handle](http://github.com/handle)
 
 ## Short Title Heading 
-Short two-sentence or so description or bio or desired work
+Short two-sentence or so description or bio or desired work role
 
 ### **Skills:**
 **List of skills**
