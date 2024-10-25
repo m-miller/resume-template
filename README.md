@@ -21,8 +21,6 @@ Short two-sentence description or bio
 
 - List item
 
-- List item
-
 
 #### **Education**
 
