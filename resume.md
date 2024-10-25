@@ -27,3 +27,4 @@ Short two-sentence or so description or bio or desired work role
 - Bulleted list of Institution, Degree, Dates
 
 #### **Other items**
+Format as needed
