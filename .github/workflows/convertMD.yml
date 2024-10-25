@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - README.md
+      - name.txt
   workflow_dispatch:
 
 jobs:
@@ -21,24 +22,25 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex fonts-roboto
 
+      - name: Set output filenames
+        id: set-filenames
+        run: |
+          filename=$(cat name.txt | tr -d '\n') # Read the name from name.txt
+          echo "pdf_filename=${filename}_resume.pdf" >> $GITHUB_ENV
+          echo "docx_filename=${filename}_resume.docx" >> $GITHUB_ENV
+
       - name: Convert Markdown to PDF and docx
         run: |
-          # echo -e "\n\n\n*This document was dynamically generated from a markdown file at https://github.com/m-miller/resume/ via a GitHub Action.*" >> output/temp_footer.md
-          # cat README.md output/temp_footer.md > output/combined.md
-          pandoc README.md -o output/template_resume.pdf --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
-          pandoc README.md -o output/template_resume.docx
+          pandoc README.md -o output/${{ env.pdf_filename }} --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
+          pandoc README.md -o output/${{ env.docx_filename }}
 
-      - name: Commit docx and PDF to repository
+      - name: Commit generated files
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           
-          # Add PDF output
-          git add output/template_resume.pdf
-          # Add docx output
-          git add output/template_resume.docx
+          git add output/${{ env.pdf_filename }}
+          git add output/${{ env.docx_filename }}
           
           git commit -m "Add generated files from README" || echo "No changes to commit"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/m-miller/resume-template.git
