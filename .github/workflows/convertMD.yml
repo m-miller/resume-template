@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - README.md
+      - resume.md
   workflow_dispatch:
 
 jobs:
@@ -30,8 +30,8 @@ jobs:
 
       - name: Convert Markdown to PDF and docx
         run: |
-          pandoc README.md -o output/${{ env.pdf_filename }} --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
-          pandoc README.md -o output/${{ env.docx_filename }} # --reference-doc=templates/reference.docx
+          pandoc resume.md -o output/${{ env.pdf_filename }} --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
+          pandoc resume.md -o output/${{ env.docx_filename }} # --reference-doc=templates/reference.docx
 
       - name: Commit generated files
         run: |
