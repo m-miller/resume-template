@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - README.md
-      - name.txt
   workflow_dispatch:
 
 jobs:
