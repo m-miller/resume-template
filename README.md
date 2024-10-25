@@ -1,6 +1,13 @@
-# Resumé versioning automation
-Convert your resumé automatically into PDF and docx formats on save. Keep a record of the changes you've made to your resumé for each employer you submit it to.
-The resumé is in Markdown format, a simple text format document. Here's a [cheatsheet](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet)
+# Résumé versioning automation and document creation
+Convert your résumé automatically into PDF and docx formats on save. Keep a record of the changes you've made to your résumé for each employer you submit it to.
+The résumé is in Markdown format, a simple text format document. Here's a [cheatsheet](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet)
+
+**Benefits:** 
+- Only one file to maintain and update
+
+- Versions are automatically saved and accessible
+
+- ATS machine-readable files
 
 ## How to use
 - Click the `Use this template` button, and create a new repository, follow the Create New Repository prompts
