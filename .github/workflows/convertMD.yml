@@ -1,4 +1,4 @@
-name: Convert Markdown to Plain Text, JSON, and PDF
+name: Convert Markdown to docx and PDF
 
 on:
   push:
@@ -21,33 +21,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex fonts-roboto
 
-      - name: Convert Markdown to Plain Text
-        run: |
-          mkdir -p output
-          pandoc README.md -t plain -o output/output.txt
-
-      - name: Convert Plain Text to JSON
-        run: |
-          python3 combine_lines.py
-
       - name: Convert Markdown to PDF and docx
         run: |
-          echo -e "\n\n\n*This document was dynamically generated from a markdown file at https://github.com/m-miller/resume/ via a GitHub Action.*" >> output/temp_footer.md
+          # echo -e "\n\n\n*This document was dynamically generated from a markdown file at https://github.com/m-miller/resume/ via a GitHub Action.*" >> output/temp_footer.md
           cat README.md output/temp_footer.md > output/combined.md
-          pandoc output/combined.md -o output/Martin_Miller_resume.pdf --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
-          pandoc output/combined.md -o output/Martin_Miller_resume.docx
+          pandoc output/combined.md -o output/template_resume.pdf --pdf-engine=xelatex -V mainfont="Roboto" -V geometry:top=0.5in,bottom=0.5in,left=0.5in,right=0.5in -V linkcolor=blue
+          pandoc output/combined.md -o output/template_resume.docx
 
       - name: Commit JSON and PDF to repository
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           
-          # Add JSON output
-          git add output/Martin_Miller_resume.json
           # Add PDF output
-          git add output/Martin_Miller_resume.pdf
+          git add output/template_resume.pdf
           # Add docx output
-          git add output/Martin_Miller_resume.docx
+          git add output/template_resume.docx
           
           git commit -m "Add generated files from README" || echo "No changes to commit"
           git push
