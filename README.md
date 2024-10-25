@@ -20,4 +20,6 @@ The résumé is in Markdown format, a simple text format document. Here's a [che
 
 - Commit the changes either to a new branch or main, the corresponding PDF and docx files will be updated in the output directory.
 
-- Download the files as needed 
+- Update as many times as needed
+
+- Download the files as needed (main branch is the most recent), navigate to your branches for past versions
