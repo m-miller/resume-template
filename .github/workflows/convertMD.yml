@@ -41,5 +41,5 @@ jobs:
           git add output/${{ env.pdf_filename }}
           git add output/${{ env.docx_filename }}
           
-          git commit -m "Add generated files from README" || echo "No changes to commit"
+          git commit -m "Add docx and PDF files to output" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@${{ github.repository }}.git
