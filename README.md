@@ -19,7 +19,9 @@ Short two-sentence description or bio
 
 - Bulleted list of accomplishments/responsibilities
 
-- 
+- List item
+
+- List item
 
 
 #### **Education**
