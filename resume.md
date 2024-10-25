@@ -6,6 +6,7 @@ Short two-sentence or so description or bio or desired work role
 
 ### **Skills:**
 **List of skills**
+- Bulleted format if you prefer
 
 ### **Professional Experiences:**  
 #### Date From - To | Title | Business, Location
