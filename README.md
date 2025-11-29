@@ -22,4 +22,4 @@ The résumé is in Markdown format, a simple text format document. Here's a [che
 
 - Update as many times as needed
 
-- Download the files as needed (main branch is the most recent), navigate to your branches for past versions
+- Download the files as needed (main branch is the most recent), navigate to your branches or history for past versions. Tip: name your branches or versions something unique (name of employer, job title, date, etc)
